@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <button class="nav-buttons" id="preview-but">Preview character</button>
+        <button class="nav-buttons">Home</button>
+        <button class="nav-buttons">Character Sheet</button>
+        <button class="nav-buttons">Help</button>
+    </nav>
+
+    <div class="main-div">
+
+        <aside class="aside-left">
+            <button class="sections">Race</button>
+            <button class="sections">Class</button>
+            <button class="sections">Level Choise</button>
+            <button class="sections">Proficiency</button>
+            <button class="sections">Ability Score</button>
+            <button class="sections">Skills</button>
+            <button class="sections">Saving Throws</button>
+            <button class="sections">Perception and Insight</button>
+        </aside>
+    
+        <aside class="aside-right">
+            <div class="title-section">
+                <h1 id="title1">Choose a race for your character</h1>
+                <hr>
+            </div>
+
+            <div class="race-choise" style="overflow-y: scroll;">
+
+                <div class="races" id="dragonborn" onclick="msg('dragonborn')">
+                    <div class="titles">
+                        <h1 class="race-headings">Dragonborn</h1>
+                        <p class="race-ps">Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Dragonborn.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="dwarf" onclick="msg('dwarf')">
+                    <div class="titles">
+                        <h1 class="race-headings">Dwarf</h1>
+                        <p class="race-ps">Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Dwarf.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="elf" onclick="msg('elf')">
+                    <div class="titles">
+                        <h1 class="race-headings">Elf</h1>
+                        <p class="race-ps">Elves are a magical people of otherworldly grace, living in the world but not entirely part of it.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Elf.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="gnome" onclick="msg('gnome')">
+                    <div class="titles">
+                        <h1 class="race-headings">Gnome</h1>
+                        <p class="race-ps">A gnome’s energy and enthusiasm for living shines through every inch of his or her tiny body</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Gnome.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="half-elf" onclick="location.href='#popup1'">
+                    <div class="titles">
+                        <h1 class="race-headings">Half-Elf</h1>
+                        <p class="race-ps">Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Half-Elf.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="halfling">
+                    <div class="titles">
+                        <h1 class="race-headings">Halfling</h1>
+                        <p class="race-ps">The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Halfling.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="half-orc">
+                    <div class="titles">
+                        <h1 class="race-headings">Half-Orc</h1>
+                        <p class="race-ps">Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human communities.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Half-Orc.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="human">
+                    <div class="titles">
+                        <h1 class="race-headings">Human</h1>
+                        <p class="race-ps">Humans are the most adaptable and ambitious people among the common races.</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Human.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+
+                <div class="races" id="tiefling">
+                    <div class="titles">
+                        <h1 class="race-headings">Tiefling</h1>
+                        <p class="race-ps">To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling</p>
+                    </div>
+                    <div class="imgs">
+                        <img src="Tiefling.jpg" width="200px" height="200px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-section" style="overflow-y: scroll;">
+                <div class="stats-div">
+                    <div class="stats-text">
+                        <ul>
+                            <li id="race">Race: </li>
+                            <li id="darkvision">Darkvision Trait</li>
+                            <li id="strenght">Strenght</li>
+                            <li id="charisma">Charisma</li>
+                            <li id="dexterity">Dexterity</li>
+                            <li id="intelligence">Intelligence</li>
+                            <li id="constitution">Constitution</li>
+                          </ul>
+                    </div>
+                    <div class="button-div"><button id="submit-but">Submit...</button></div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <h2 id="pop-h1">Choose skills to allocate points to</h2>
+
+                <input type="checkbox" id="strenght-check" value="strenght" class="checks">
+                <label for="strenght-check" class="checks-label">Strenght</label><br>
+
+                <input type="checkbox" id="charisma-check" value="charisma" class="checks">
+                <label for="charisma-check" class="checks-label">Charisma</label><br>
+
+                <input type="checkbox" id="dexterity-check" value="dexterity" class="checks">
+                <label for="dexterity-check" class="checks-label">Dexterity</label><br>
+
+                <input type="checkbox" id="intelligence-check" value="intelligence" class="checks">
+                <label for="intelligence-check" class="checks-label">Intelligence</label><br>
+
+                <input type="checkbox" id="constitution-check" value="constitution" class="checks">
+                <label for="constitution-check" class="checks-label">Constitution</label><br>
+                
+                <button onclick="allocatePoints()">Presss.</button>
+
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
